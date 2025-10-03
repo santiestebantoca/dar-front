@@ -1,0 +1,52 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {},
+  "launch": {
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Launch:localhost",
+        "request": "launch",
+        "runtimeArgs": [
+          "run-script",
+          "dev"
+        ],
+        "runtimeExecutable": "npm",
+        "skipFiles": [
+          "<node_internals>/**"
+        ],
+        "type": "node"
+      },
+      {
+        "name": "Launch:corp",
+        "request": "launch",
+        "runtimeArgs": [
+          "run-script",
+          "dev_corp"
+        ],
+        "runtimeExecutable": "npm",
+        "skipFiles": [
+          "<node_internals>/**"
+        ],
+        "type": "node"
+      },
+      {
+        "name": "Launch:corp-kk",
+        "request": "launch",
+        "runtimeArgs": [
+          "run-script",
+          "dev_corp_kk"
+        ],
+        "runtimeExecutable": "npm",
+        "skipFiles": [
+          "<node_internals>/**"
+        ],
+        "type": "node"
+      }
+    ]
+  }
+}

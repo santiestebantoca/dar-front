@@ -1,0 +1,1 @@
+VITE_API_URL="https://192.168.33.13:8000/dar"
