@@ -123,7 +123,7 @@ const actions = ref([
       <img src="@/assets/images/dar.png" alt="DAR icon" width="200" />
       <h4 class="mt-4 text-primary-emphasis">DESPACHADOR AUTOMÁTICO DE REPORTES</h4>
     </div>
-    <div class="content-bottom hstack gap-3 justify-content-center">
+    <div class="content-bottom hstack gap-3 justify-content-center bg-light-2 rounded-top-3">
       <bs-btn v-for="action in actions" v-bind="action" flat @click="action.on = true" />
       <Descargar v-model="actions[0].on" />
       <Contactos v-model="actions[1].on" />
