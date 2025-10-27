@@ -9,7 +9,8 @@ const useFilter = () => {
     nombpta: undefined,
     zona: undefined,
     telefono: undefined,
-    problema: undefined
+    problema: undefined,
+    grupo: undefined
   }
   const by = ref({ ...def })
   const array = ref([])
@@ -50,7 +51,14 @@ const useFilter = () => {
         value: d.problema,
         label: d.problema,
       })), distinct('value'), arrange('value')))
-  const options = { nombpta, zona, telefono, problema }
+  const grupo = computed(() =>
+    tidy(data.value,
+      ...filtersByObject({ ...by.value, grupo: undefined }),
+      map(d => ({
+        value: d.grupo,
+        label: d.grupo,
+      })), distinct('value'), arrange('value')))
+  const options = { nombpta, zona, telefono, problema, grupo }
 
   return { data, array, by, on, apply, reset, options }
 }

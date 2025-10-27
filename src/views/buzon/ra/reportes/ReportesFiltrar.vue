@@ -23,7 +23,8 @@ const vPlaceholder = (el) => {
     <bs-dialog-header label="Filtros" />
     <form @submit.prevent class="m-0">
       <bs-dialog-body>
-        <label class="form-label">Central</label>
+        <!-- `nombpta` or `zona` not in `data` (see buzon-ra.js useReportes) -->
+        <!-- <label class="form-label">Central</label>
         <select class="form-select mb-3" v-model="store.filter.by.nombpta" v-placeholder>
           <option :value="undefined">-</option>
           <option v-for="{ value, label } in store.filter.options.nombpta" :value="value" v-text="label" />
@@ -32,7 +33,7 @@ const vPlaceholder = (el) => {
         <select class="form-select mb-3" v-model="store.filter.by.zona" v-placeholder>
           <option :value="undefined">-</option>
           <option v-for="{ value, label } in store.filter.options.zona" :value="value" v-text="label" />
-        </select>
+        </select> -->
         <label class="form-label">Servicio</label>
         <select class="form-select mb-3" v-model="store.filter.by.telefono" v-placeholder>
           <option :value="undefined">-</option>
@@ -42,6 +43,11 @@ const vPlaceholder = (el) => {
         <select class="form-select mb-3" v-model="store.filter.by.problema" v-placeholder>
           <option :value="undefined">-</option>
           <option v-for="{ value, label } in store.filter.options.problema" :value="value" v-text="label" />
+        </select>
+        <label class="form-label">Grupo</label>
+        <select class="form-select mb-3" v-model="store.filter.by.grupo" v-placeholder>
+          <option :value="undefined">-</option>
+          <option v-for="{ value, label } in store.filter.options.grupo" :value="value" v-text="label" />
         </select>
       </bs-dialog-body>
       <bs-dialog-footer start>
